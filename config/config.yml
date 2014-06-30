@@ -7,6 +7,9 @@ sources:
         - homebrew.yml
         - vagrant.yml
         - dropbox.yml
+        - chrome-beta.yml
+        - iterm2.yml
+
     - name: 'bootstrap'
       repo: 'git@github.com:robyoung/ansible-bootstrap.git'
       playbooks:
@@ -14,3 +17,4 @@ sources:
         - vim.yml
         - dotfiles.yml
         - zsh.yml
+        - apps.yml

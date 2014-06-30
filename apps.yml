@@ -1,0 +1,26 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install apps from homebrew
+      homebrew: name={{ item }} state=present
+      with_items:
+        - bazaar
+        - git
+        - go
+        - htop-osx
+        - mercurial
+        - python
+        - tmux
+        - wget
+
+    - name: install pip
+      shell: which pip > /dev/null || curl -LSs https://bootstrap.pypa.io/get-pip.py | python
+      sudo: yes
+
+    - name: install apps from pip
+      pip: name={{ item }}
+      sudo: yes
+      with_items:
+        - virtualenv
+        - virtualenvwrapper
