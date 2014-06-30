@@ -11,3 +11,18 @@
         - playground
         - personal
         - gds
+
+    - name: clone personal github repos
+      git: repo=git@github.com:robyoung/{{ item }}.git dest=~/Projects/personal/{{ item }}
+      with_items:
+        - dotfiles
+
+    - name: clone gds github repositories
+      git: repo=git@github.com:alphagov/{{ item }}.git dest=~/Projects/gds/{{ item }}
+      with_items:
+        - backdrop
+        - pp-puppet
+        - stagecraft
+        - spotlight
+        - performanceplatform-collector
+        - performanceplatform-collector-config
