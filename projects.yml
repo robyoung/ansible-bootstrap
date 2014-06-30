@@ -8,14 +8,15 @@
     - name: create Projects directories
       file: path=~/Projects/{{ item }} recurse=yes state=directory
       with_items:
-        - playground
-        - personal
         - gds
+        - personal
+        - playground
 
     - name: clone personal github repos
-      git: repo=git@github.com:robyoung/{{ item }}.git dest=~/Projects/personal/{{ item }}
+      git: repo=git@github.com:robyoung/{{ item.name }}.git dest=~/Projects/personal/{{ item.name }} version={{ item.version|default("master") }}
       with_items:
-        - dotfiles
+        - { name: 'dotfiles' }
+        - { name: 'password-store', version: 'add-gfshare-support' }
 
     - name: clone gds github repositories
       git: repo=git@github.com:alphagov/{{ item }}.git dest=~/Projects/gds/{{ item }}

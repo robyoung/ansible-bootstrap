@@ -5,3 +5,17 @@
     - name: symlink dotfiles
       file: src=~/Projects/personal/dotfiles/{{ item }} dest=~/.{{ item }} state=link
       with_lines: ls ~/Projects/personal/dotfiles | grep -v bootstrap.sh
+
+    - name: create bin directory
+      file: path=~/bin state=directory
+
+    - name: symlink pass
+      file: src=~/Projects/personal/password-store/src/password-store.sh dest=~/bin/pass state=link
+
+    - name: symlink pass completion
+      file: src=~/Projects/personal/password-store/src/completion/pass.zsh-completion dest=/usr/local/share/zsh/site-functions/_pass state=link
+      sudo: yes
+
+    - name: symlink password store
+      file: src=~/Dropbox/password-store dest=~/.password-store state=link
+

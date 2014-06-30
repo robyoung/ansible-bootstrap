@@ -7,12 +7,18 @@
       with_items:
         - bazaar
         - git
+        - gnu-getopt
         - go
         - htop-osx
+        - libgfshare
         - mercurial
         - python
         - tmux
+        - tree
         - wget
+
+    - name: fix pbcopy inside tmux
+      homebrew: name=reattach-to-user-namespace install_options=wrap-pbcopy-and-pbpaste state=present
 
     - name: install pip
       shell: which pip > /dev/null || curl -LSs https://bootstrap.pypa.io/get-pip.py | python
