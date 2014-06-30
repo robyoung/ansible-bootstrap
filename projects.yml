@@ -9,5 +9,5 @@
       file: path=~/Projects/{{ item }} recurse=yes state=directory
       with_items:
         - playground
-	- personal
-	- gds
+        - personal
+        - gds
