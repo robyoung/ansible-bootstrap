@@ -1,0 +1,13 @@
+---
+sources:
+  git:
+    - name: 'osx'
+      repo: 'https://github.com/spencergibb/ansible-osx'
+      playbooks:
+        - homebrew.yml
+        - vagrant.yml
+        - dropbox.yml
+    - name: 'bootstrap'
+      repo: 'git@github.com:robyoung/ansible-bootstrap.git'
+      playbooks:
+        - projects.yml

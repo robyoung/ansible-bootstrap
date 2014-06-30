@@ -1,0 +1,13 @@
+---
+- hosts: workstation
+  
+  tasks:
+    - name: print from playbook
+      debug: msg="in projects.yml"
+
+    - name: create Projects directories
+      file: path=~/Projects/{{ item }} recurse=yes state=directory
+      with_items:
+        - playground
+	- personal
+	- gds
