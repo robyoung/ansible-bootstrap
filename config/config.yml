@@ -11,3 +11,4 @@ sources:
       repo: 'git@github.com:robyoung/ansible-bootstrap.git'
       playbooks:
         - projects.yml
+        - vim.yml
