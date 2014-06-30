@@ -1,0 +1,7 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: symlink dotfiles
+      file: src=~/Projects/personal/dotfiles/{{ item }} dest=~/.{{ item }} state=link
+      with_lines: ls ~/Projects/personal/dotfiles | grep -v bootstrap.sh

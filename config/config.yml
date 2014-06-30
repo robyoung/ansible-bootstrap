@@ -12,3 +12,4 @@ sources:
       playbooks:
         - projects.yml
         - vim.yml
+        - dotfiles.yml
