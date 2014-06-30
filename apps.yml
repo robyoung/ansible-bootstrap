@@ -8,6 +8,8 @@
         - bazaar
         - git
         - gnu-getopt
+        - gpg
+        - gpg-agent
         - go
         - htop-osx
         - libgfshare
