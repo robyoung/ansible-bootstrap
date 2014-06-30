@@ -1,0 +1,9 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: set zsh as default shell
+      shell: '[ $(basename $SHELL) = zsh ] || chsh -s $(which zsh)'
+
+    - name: install oh my zsh
+      git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh

@@ -13,3 +13,4 @@ sources:
         - projects.yml
         - vim.yml
         - dotfiles.yml
+        - zsh.yml
