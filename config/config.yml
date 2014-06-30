@@ -15,6 +15,7 @@ sources:
       playbooks:
         - projects.yml
         - vim.yml
+        - virtualbox.yml
         - dotfiles.yml
         - zsh.yml
         - apps.yml
