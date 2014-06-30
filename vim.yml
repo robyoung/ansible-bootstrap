@@ -15,7 +15,7 @@
       command: curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim creates=~/.vim/autoload/pathogen.vim
 
     - name: install NerdTree
-      git: repo=https://github.com/scrooloose/nerdtree.git dest=~/vim/bundles/nerdtree
+      git: repo=https://github.com/scrooloose/nerdtree.git dest=~/.vim/bundle/nerdtree
 
     - name: install vim-puppet
-      git: repo=https://github.com/rodjek/vim-puppet.git dest=~/vim/bundles/vim-puppet
+      git: repo=https://github.com/rodjek/vim-puppet.git dest=~/.vim/bundle/vim-puppet
