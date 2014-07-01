@@ -13,13 +13,13 @@
         - playground
 
     - name: clone personal github repos
-      git: repo=git@github.com:robyoung/{{ item.name }}.git dest=~/Projects/personal/{{ item.name }} version={{ item.version|default("master") }}
+      git: repo=git@github.com:robyoung/{{ item.name }}.git dest=~/Projects/personal/{{ item.name }} version={{ item.version|default("master") }} update=no
       with_items:
         - { name: 'dotfiles' }
         - { name: 'password-store', version: 'add-gfshare-support' }
 
     - name: clone gds github repositories
-      git: repo=git@github.com:alphagov/{{ item }}.git dest=~/Projects/gds/{{ item }}
+      git: repo=git@github.com:alphagov/{{ item }}.git dest=~/Projects/gds/{{ item }} update=no
       with_items:
         - backdrop
         - pp-puppet
