@@ -19,3 +19,4 @@ sources:
         - dotfiles.yml
         - zsh.yml
         - apps.yml
+        - slate.yml

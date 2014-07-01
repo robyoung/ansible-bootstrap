@@ -1,0 +1,9 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install slate
+      mac_pkg: pkg_type=app
+               url=http://slate.ninjamonkeysoftware.com/Slate.dmg
+               archive_type=dmg archive_path=Slate.app
+      sudo: yes
