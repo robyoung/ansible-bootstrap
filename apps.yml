@@ -5,6 +5,7 @@
     - name: install apps from homebrew
       homebrew: name={{ item }} state=present
       with_items:
+        - ack
         - bazaar
         - git
         - gnu-getopt
