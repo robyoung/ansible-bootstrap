@@ -20,3 +20,4 @@ sources:
         - zsh.yml
         - apps.yml
         - slate.yml
+        - ssh.yml

@@ -1,0 +1,12 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: build
+      get_url: url=https://raw.githubusercontent.com/alphagov/gds-boxen/master/modules/gds_ssh_config/files/gds_ssh_config dest=~/.ssh/config
+
+    - name: get pp config
+      get_url: url=https://raw.githubusercontent.com/alphagov/gds-boxen/master/modules/teams/templates/performance-platform/ssh-config dest=/tmp/pp-ssh-config
+
+    - name: concat config
+      shell: cat /tmp/pp-ssh-config >> ~/.ssh/config
