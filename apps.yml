@@ -13,12 +13,14 @@
         - gpg-agent
         - go
         - htop-osx
-        - libgfshare
         - mercurial
         - python
         - tmux
-        - tree
         - wget
+        # For password-manager
+        - tree
+        - pwgen
+        - libgfshare
 
     - name: fix pbcopy inside tmux
       homebrew: name=reattach-to-user-namespace install_options=wrap-pbcopy-and-pbpaste state=present
