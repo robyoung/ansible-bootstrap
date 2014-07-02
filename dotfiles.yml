@@ -19,3 +19,5 @@
     - name: symlink password store
       file: src=~/Dropbox/password-store dest=~/.password-store state=link
 
+    - name: make git templates directory
+      file: path=~/.git_template state=directory
