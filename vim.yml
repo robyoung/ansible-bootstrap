@@ -19,3 +19,6 @@
 
     - name: install vim-puppet
       git: repo=https://github.com/rodjek/vim-puppet.git dest=~/.vim/bundle/vim-puppet
+
+    - name: install vim-mustache
+      git: repo=https://github.com/juvenn/mustache.vim.git dest=~/.vim/bundle/mustache
