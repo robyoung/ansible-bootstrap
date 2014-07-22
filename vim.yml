@@ -22,3 +22,6 @@
 
     - name: install vim-mustache
       git: repo=https://github.com/juvenn/mustache.vim.git dest=~/.vim/bundle/mustache
+
+    - name: install syntastic
+      git: repo=https://github.com/scrooloose/syntastic.git dest=~/.vim/bundle/syntastic
