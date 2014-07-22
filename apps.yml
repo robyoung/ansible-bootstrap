@@ -21,6 +21,8 @@
         - tree
         - pwgen
         - libgfshare
+        - encfs
+        - osxfuse
 
     - name: fix pbcopy inside tmux
       homebrew: name=reattach-to-user-namespace install_options=wrap-pbcopy-and-pbpaste state=present
